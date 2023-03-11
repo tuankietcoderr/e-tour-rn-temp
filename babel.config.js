@@ -4,15 +4,14 @@ let alias = {}
 
 for (let x in rawAlias) {
     alias[x.replace('/*', '')] = rawAlias[x].map((p) => {
-        return p.replace('/*', '').replace('[', '').replace(']', '')
+        return p.replace('/*', '')
     })[0]
 }
 
 module.exports = function (api) {
-    console.log('alias', alias)
     api.cache(true)
     return {
-        presets: ['babel-preset-expo'],
+        presets: ['babel-preset-expo', '@babel/preset-typescript'],
         plugins: [
             [
                 'module-resolver',

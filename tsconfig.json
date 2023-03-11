@@ -8,7 +8,6 @@
             "@screens/*": ["./src/screens/*"],
             "@utils/*": ["./src/utils/*"],
             "@hooks/*": ["./src/hooks/*"],
-            "@assets/*": ["assets/*"],
             "@types/*": ["./src/types/*"],
             "@config/*": ["./src/config/*"],
             "@navigation/*": ["./src/navigation/*"],
@@ -19,7 +18,9 @@
             "@locales/*": ["./src/locales/*"],
             "@store/*": ["./src/store/*"],
             "@features/*": ["./src/store/features/*"],
-            "@schema/*": ["./src/schema/*"]
+            "@schema/*": ["./src/schema/*"],
+            "@assets/*": ["./assets/*"],
+            "@lib/*": ["./src/lib/*"]
         }
     }
 }

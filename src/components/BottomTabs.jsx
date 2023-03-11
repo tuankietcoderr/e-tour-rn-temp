@@ -7,7 +7,14 @@ const Tab = createBottomTabNavigator()
 
 const BottomTabs = () => {
     return (
-        <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
+        <Tab.Navigator
+            sceneContainerStyle={
+                {
+                    // backgroundColor: AppColors.white,
+                }
+            }
+            tabBar={(props) => <MyTabBar {...props} />}
+        >
             {navigator.map((nav, index) => (
                 <Tab.Screen
                     key={nav.name}
@@ -28,8 +35,7 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
             style={{
                 flexDirection: 'row',
                 height: 'auto',
-                paddingHorizontal: 0,
-                paddingVertical: 8,
+                backgroundColor: AppColors.white,
                 elevation: 10,
             }}
         >
@@ -76,7 +82,13 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
                         testID={options.tabBarTestID}
                         onPress={onPress}
                         onLongPress={onLongPress}
-                        style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
+                        style={{
+                            flex: 1,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+
+                            paddingVertical: 10,
+                        }}
                     >
                         <GeneIcon width={20} height={20} viewBox={'0 0 13 13'} color={color} />
                         <Text style={{ color }}>{label}</Text>
